@@ -20,7 +20,7 @@
 open dist/TelegramKeywordNotifier.app
 ```
 
-Скрипт собирает релизный arm64-бинарник и упаковывает его в `dist/TelegramKeywordNotifier.app`.
+Скрипт собирает релизный arm64-бинарник, упаковывает его в `dist/TelegramKeywordNotifier.app` и при наличии `codesign` выполняет ad-hoc подпись.
 
 Если нужно изменить bundle identifier:
 

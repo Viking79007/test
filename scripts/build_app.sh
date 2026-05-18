@@ -63,4 +63,8 @@ cat > "${BUNDLE_DIR}/Contents/Info.plist" <<PLIST
 </plist>
 PLIST
 
+if command -v codesign >/dev/null 2>&1; then
+  codesign --force --deep --sign - "${BUNDLE_DIR}"
+fi
+
 echo "Created ${BUNDLE_DIR}"

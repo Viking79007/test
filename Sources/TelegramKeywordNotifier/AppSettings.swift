@@ -1,6 +1,7 @@
 import Combine
 import Foundation
 
+@MainActor
 final class AppSettings: ObservableObject {
     @Published var botToken: String {
         didSet { save() }
